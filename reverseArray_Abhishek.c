@@ -1,18 +1,19 @@
 #include<stdio.h>
 main()
 {
-	int i,size;
+	int index,size,temp;
 	printf("enter array size");
 	int arr[size];
 	printf("enter elements for array");
-	for (i = 0; i < size; i++)
-		scanf("%d", &arr[i]);
-	for (i = 0; i < size; i++)
+	for (index = 0; index < size; i++)
+		scanf("%d", &arr[index]);
+	for (index = 0; index < size; index++)
 	{
-		arr[i] = arr[i]+arr[size-1-i];
-		arr[size-1-i] = arr[i]-arr[size-1-i];
-		arr[i] = arr[i]-arr[size-1-i];
+		temp=arr[index];
+		arr[index]=arr[size-1-index];
+		arr[size-1-index]=temp;
 	}
-	for (i = 0; i < size; i++)
-	printf("%d", arr[i]);
+	printf("the reversed array is:\n");
+	for (index = 0; index < size; index++)
+		printf("%d", arr[index]);
 }
